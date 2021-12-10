@@ -10,8 +10,8 @@ private class DreamHouseSampleDataControllerTest {
         insert property;
         insert broker;
 
-        System.assertEquals( 1, [ SELECT count() FROM Property__c ] );
-        System.assertEquals( 1, [ SELECT count() FROM Broker__c ] );
+        System.assertEquals( 1, [ SELECT count() FROM Property__c ] ,'messege');
+        System.assertEquals( 1, [ SELECT count() FROM Broker__c ] ,'messege');
 
         Test.startTest();
 
@@ -19,9 +19,9 @@ private class DreamHouseSampleDataControllerTest {
 
         Test.stopTest();
 
-        System.assertEquals( 0, [ SELECT count() FROM Property__c ] );
-        System.assertEquals( 0, [ SELECT count() FROM Broker__c ] );
-        System.assertEquals( 10, [ SELECT count() FROM Broker__c ] );
+        System.assertEquals( 0, [ SELECT count() FROM Property__c ],'messege' );
+        System.assertEquals( 0, [ SELECT count() FROM Broker__c ] ,'messege');
+        System.assertEquals( 10, [ SELECT count() FROM Broker__c ] ,'messege');
 
     }
 
